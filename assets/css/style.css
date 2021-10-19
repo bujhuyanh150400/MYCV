@@ -1,0 +1,687 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Markazi Text', serif;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background: #C38B63;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #af9d91;
+}
+
+/* responsive */
+/* Tablet */
+@media (min-width: 740px) and (max-width:1023px) {
+    #about .about-content .about-detail {
+        flex-direction: column;
+    }
+    #about .about-content .about-detail .about-img img {
+        width: 200px !important;
+        height: 200px !important ;
+    }
+    #about .about-content .about-detail .about-text {
+        font-size: 15px !important;
+    }
+    
+    #more .more-content .more-details {
+        flex-direction: column;
+    }
+    #more .more-content .more-details .more-img img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    #about .about-content .about-detail .about-text {
+        font-size: 20px !important;
+    }
+    #skill .skill-content .skill-detail .skill-detail-text {
+        font-size: 20px !important;
+    }
+}
+@media (max-width: 739px) { 
+    #header .nav {
+        flex-direction: column;
+    }
+    #header .nav .header-menu li a {
+        font-size: 15px !important;
+    }
+    #header .nav .header-logo  {
+        padding: 10px 0;
+    }
+    #header .header-media-icons {
+        display: none;
+    }
+    
+    #name .name-content .name-text-3,
+    #name .name-content .name-text-4
+    {
+     display: none;
+    }
+    #name .name-content .name-btn {
+        display: none !important;
+    }
+    #name .name-content .name-text-2 {
+        font-size:20px !important;
+    }
+    #about .about-content .about-detail {
+        flex-direction: column;
+    }
+    #about .about-content .about-detail .about-img img {
+        width: 200px !important;
+        height: 200px !important ;
+    }
+    #about .about-content .about-detail .about-text {
+        font-size: 20px !important;
+    }
+    #skill .skill-content {
+        flex-direction: column;
+    }
+    #skill .skill-content .skill-detail .skill-detail-text {
+        font-size: 20px !important;
+    }
+    #skill .skill-content .skill-detail .skill-detail-text .skill-CV  button {
+        width: 100%;
+    }
+    #skill .skill-content .skill-experience {
+        width: 100% !important;
+    }
+    #more .more-content .more-details {
+        flex-direction: column;
+    }
+    #more .more-content .more-details .more-img img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    #footer {
+        flex-direction: column;
+    }
+}
+
+
+/* BODY */
+
+/* Header  */
+
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height:46px;
+    z-index: 1;
+}
+
+#header .nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 3px solid #84776F ;
+    background-color: #fff;
+}
+
+#header .nav .header-logo a{
+    font-family: 'Press Start 2P', cursive;
+    color: #92400E;
+    font-size: 25px;
+}
+#header .nav .header-logo a:hover {
+    opacity: 0.6;
+}
+#header .nav .header-menu {
+   display: flex;
+}
+#header .nav .header-menu > li {
+    margin: 0 16px ;
+}
+#header .nav .header-menu li a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+#header .nav .header-menu li a:hover{
+    color: #92400E;
+    font-size: 25px ;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+#header .header-media-icons a{
+    font-size: 20px;
+    margin: 0 5px;
+    color: #92400E;
+    cursor: pointer;
+    font-weight: bold;
+}
+#header .header-media-icons a:hover{
+    opacity: 0.6;
+    font-size: 30px ;
+    transition: all 0.3s ease;
+}
+
+#name {
+    position: relative; 
+    margin-top: 60px;
+    padding: 30%;
+    background: url("../img/background.png") 
+    top center / cover no-repeat;
+}
+
+#name .name-content {
+    position: absolute;
+    left: 40px;
+    top: 40%;
+    bottom: 60%;
+    line-height: 1.4 ;
+    text-align: left;
+}
+#name .name-content .name-text-1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ccc;
+}
+#name .name-content .name-text-2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #fff ;
+    animation: typing 5s steps(15) infinite;    
+}
+
+@keyframes typing {
+    0% {
+        width: 0ch;
+    }
+    50%{
+        width: 15ch;
+    } 
+    100%{
+        width: 0ch; 
+    }
+}
+
+#name .name-content .name-text-2:hover {
+    
+    opacity: 0.6;
+    color:#92400E ;
+    transition: all 0.3s ease;
+}
+#name .name-content .name-text-3{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ccc;
+    font-family: 'Press Start 2P', cursive;
+}
+#name .name-content .name-text-4{
+    font-size: 30px;
+    color: #ccc;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#name .name-content .name-btn  {
+    margin-top: 25px;
+    padding: 11px 16px;
+    display: inline-block;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #92400E;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: center;
+    color: #ccc;
+    opacity: 0.6;
+}
+#name .name-content .name-btn:hover
+{
+    color: #92400E;
+    background-color: #ccc;
+    border: 0.1px solid #92400E;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#about {
+    padding: 40px 0;
+    background-color: #ccc;
+
+}
+#about .about-content {
+    width: 80%;
+    margin: 40px auto;
+}
+
+#about .about-content .about-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+#about .about-content .about-title span {
+    color: #84776F;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+#about .about-content .about-title span .about-title-row {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #C38B63;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+#about .about-content .about-detail {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;  
+}
+#about .about-content .about-detail .about-img img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 5px solid #C38B63;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.425);
+}
+
+#about .about-content .about-detail .about-text {
+    font-size: 30px;
+    text-align: justify;
+    padding: 50px;
+    line-height: 1.6;
+} 
+#about .about-content .about-detail .about-text span {
+    font-size: 40px ;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+#skill {
+    background-color: #84776F;
+}
+#skill .skill-content {
+    padding: 40px ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#skill .skill-content .skill-detail {
+    padding: 20px;
+}
+#skill .skill-content .skill-detail .skill-title{
+    color:#fff ;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+#skill .skill-content .skill-detail .skill-title .skill-title-row {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #C38B63;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+#skill .skill-content .skill-detail .skill-title:hover{
+    opacity: 0.6;
+    transition: all 0.3s ease; 
+}
+#skill .skill-content .skill-detail .skill-detail-text {
+    width: 90%;
+    margin-top: 25px ;
+    text-align: justify;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #fff;
+}
+#skill .skill-content .skill-detail .skill-detail-text .skill-CV  button {
+    margin-top: 25px;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 11px 16px;
+    font-size: 25px;
+    font-weight: bold;
+    background: #92400E;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: center;
+    color: #ccc;
+    opacity: 0.6;
+    border: none;
+}
+#skill .skill-content .skill-detail .skill-detail-text .skill-CV  button:hover {
+    color: #92400E;
+    background-color: #ccc;
+    border: 0.1px solid #92400E;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+#skill .skill-content .skill-experience {
+    width: 50%;
+    padding: 20px;  
+    display: flex;
+    flex-direction: column;
+    background-color:#8a6f5d;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.425);
+}
+#skill .skill-content .skill-experience:hover {
+    background-color: #c9beb78f;
+    transition: all 0.3s ease;
+
+}
+#skill .skill-content .skill-experience .skill-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+#skill .skill-content .skill-experience .skill-box .skill-topic {
+    font-size: 25px;
+    padding: 10px 0;
+    font-weight: 600;
+    color: #000;
+}
+
+#skill .skill-content .skill-experience .skill-box .skill-percent {
+    width:var(--percent);
+    color:#fff;
+    text-align: center;
+    justify-self: center;
+    font-size: 25px;
+    height: 30px ;
+    background-color:#C38B63;
+    border-radius: 5px ;
+    border: 1px solid #84776F;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.425);
+}
+
+/* Modal-CV */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 2;
+}
+.open {
+    display: flex;
+}
+.modal-container {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.6s;
+}
+
+.modal-header {
+    background: #C38B63;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #fff;
+}
+.modal-heading-icon {
+    padding-right: 16px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+    color: #fff;
+}
+.modal-close i {
+    font-size: 20px;
+}
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 16px;
+
+}
+.modal-body .about-CV {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.modal-body .about-CV .CV-title {
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+.modal-body .about-CV a {
+    padding: 11px 16px;
+    display: block;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #92400E;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: center;
+    color: #ccc;
+    opacity: 0.6;
+}
+.modal-body .about-CV a:hover {
+    color: #92400E;
+    background-color: #ccc;
+    border: 0.1px solid #92400E;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* End: modal */
+
+/* More */
+#more{
+    padding-top: 40px;
+    
+}
+
+#more .more-content {
+    width: 80%;
+    margin: 40px auto;
+    
+}
+
+#more .more-content .more-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+#more .more-content .more-title .more-title-span {
+    color: #84776F;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+#more .more-content .more-title .more-title-span .more-title-row {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #C38B63;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+#more .more-content .more-details { 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;  
+}
+#more .more-content .more-details .more-img { 
+    padding: 20px;
+}
+#more .more-content .more-details .more-img img { 
+    
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    border: 5px solid #C38B63;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.425);
+}
+#more .more-details .more-boxs {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#more .more-details .more-boxs .more-box {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+#more .more-details .more-boxs .more-box:hover {
+    background: #84776F;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+#more .more-details .more-boxs .more-box .more-icon{
+    width: 50px;
+    height: 50px;
+    background: #C38B63;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: #fff;
+    margin: 0 auto 10px auto;
+    transition: all 0.4s ease;
+}
+#more .more-details .more-boxs .more-box:hover .more-icon{
+    background-color: #fff;
+    color:#C38B63 ;
+}
+#more .more-details .more-boxs .more-box .more-topic {
+    font-size: 25px;
+    font-weight: 600;
+}
+#more .more-details .more-boxs .more-box p {
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: justify;
+}
+/* End: More */
+
+/* footer */
+#footer {
+    background-color: #84776F;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#footer .footer-logo {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 15px;
+}
+#footer .footer-logo > a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    color: #fff;
+    padding-bottom: 16px; 
+    
+   
+}
+#footer .footer-logo > a:hover {
+    opacity: 0.6;
+}
+#footer .footer-logo .footer-copyright{
+    font-size: 15px;
+    text-align: center;
+}
+
+#footer .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    font-size: 20px;
+}
+#footer .footer-contact .footer-contact-logo > a {
+    font-size: 30px;
+    padding: 0 6px;
+    color: #fff;
+}
+
+#footer .footer-contact .footer-contact-logo > a:hover {
+    font-size: 35px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+
+}
+#footer .footer-contact .footer-contact-info{
+    padding-top: 15px;
+}
+#footer .footer-contact .footer-contact-info a {
+    color: #fff;
+    padding-left: 10px;
+    font-size: 15px !important;
+    font-weight: 600;
+}
+#footer .footer-contact .footer-contact-info a:hover {
+    opacity: 0.6;
+}
+/* End : footer */
